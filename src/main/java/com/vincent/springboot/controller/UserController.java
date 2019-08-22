@@ -14,7 +14,7 @@ public class UserController {
 
     @RequestMapping(value = "/hello")
     public User cs() {
-        //调用dao层
+        //调用dao层   添加注释
         User user = userMapper.selectUserByName("mike");
         return user;
     }
