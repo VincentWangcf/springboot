@@ -10,6 +10,16 @@
 -- UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值
 update user set username = #{name}  where age =2
     </update>
+    <update id="updateUser" parameterType="com.vincent.springboot.domain.User">
+        UPDATE user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="username!=null">username=#{username},</if>
+            <if test="age!=null">age=#{age},</if>
+
+
+        </trim>
+        WHERE id=#{id}
+    </update>
 
     <select id="selectUserByName"  resultType="com.vincent.springboot.domain.User">
         SELECT * FROM user WHERE username = #{name}

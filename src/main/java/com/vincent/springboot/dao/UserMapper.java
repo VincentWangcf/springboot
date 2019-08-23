@@ -11,4 +11,6 @@ public interface UserMapper {
      int insetUser(User user);
 
     void updateByUser(User user);
+
+    void updateUser(User user);
 }
