@@ -8,4 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
     User selectUserByName(String name);
+     int insetUser(User user);
+
+    void updateByUser(User user);
 }
