@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.vincent.springboot.dao.ProductDao" >
+    <update id="decreaseProduct">
+        update t_product set stock =stock - #{quantity}
+        where id =#{id}
+    </update>
+    <!--<resultMap id="BaseResultMap" type="com.vincent.springboot.dao.UserMapper">-->
+        <!--<result column="age" property="age" jdbcType="INTEGER" />-->
+    <!--</resultMap>-->
+    <select id="getProduct"  resultType="com.vincent.springboot.pojo.ProductPo">
+--       获取产品
+        SELECT id,product_name as productName,
+         sock,price,version,note FROM t_product WHERE id = #{id}
+    </select>
+
+
+
+
+
+
+    <!--<select id="getUserById" resultType="com.vincent.springboot.domain.User">-->
+         <!--SELECT * FROM user WHERE id = #{id}-->
+    <!--</select>-->
+    <!--<select id="findUsers" resultType="com.vincent.springboot.domain.User">-->
+         <!--SELECT * FROM user WHERE username = #{name}-->
+    <!--</select>-->
+
+
+    <!--<insert id="insertUser"  parameterType="com.vincent.springboot.domain.User" useGeneratedKeys="true" keyProperty="id">-->
+		<!--insert into user(username,age )-->
+		<!--values(#{username},#{age})-->
+<!--</insert>-->
+
+</mapper>
