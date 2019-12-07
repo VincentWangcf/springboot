@@ -14,8 +14,13 @@ public class UserController {
 
     @RequestMapping(value = "/hello")
     public User cs() {
-        //调用dao层   添加注释a test' 啊
-        User user = userMapper.selectUserByName("mike");
+        //调用dao层   添加注释a test' 啊    test   test02
+        User user = userMapper.selectUserByName("lilei22");
+        Integer id = user.getId();
+        System.out.println("hhdzfhdzh");
+        user.setAge(66);
+        user.setUsername("Vincent");
+        userMapper.updateUser(user);
         return user;
     }
 
