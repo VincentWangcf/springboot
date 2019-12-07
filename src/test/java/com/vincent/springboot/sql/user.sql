@@ -33,7 +33,4 @@ CREATE TABLE `user` (
 INSERT INTO `user` VALUES ('1', 'lilei', '2', null);
 INSERT INTO `user` VALUES ('2', 'Vincent', '66', null);
 
-
--- branch   add branch
-
--- 20191207 for test commit   master
+-- 20191207 for test commit
